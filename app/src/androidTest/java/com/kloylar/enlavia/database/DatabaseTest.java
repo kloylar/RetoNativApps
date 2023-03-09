@@ -1,4 +1,4 @@
-package com.kloylar.enlavia;
+package com.kloylar.enlavia.database;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 
@@ -11,7 +11,6 @@ import org.junit.runner.RunWith;
 import android.content.Context;
 
 import androidx.room.Room;
-import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.platform.app.InstrumentationRegistry;
 

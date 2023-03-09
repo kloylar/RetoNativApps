@@ -1,12 +1,16 @@
 <resources>
     <string name="app_name">En La Via</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Ajustes</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
+    <string name="first_fragment_label">Primer Fragmento</string>
+    <string name="second_fragment_label">Segundo Fragmento</string>
+    <string name="next">Siguiente</string>
+    <string name="previous">Anterior</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="hello_first_fragment">Hola primer fragmento</string>
+    <string name="hello_second_fragment">Hola segundo fragmento Arg: %1$s</string>
+
+    <string name="new_report">Nuevo reporte</string>
+    <string name="description">Descripción</string>
+
 </resources>

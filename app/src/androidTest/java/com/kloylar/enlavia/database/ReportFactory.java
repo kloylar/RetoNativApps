@@ -1,4 +1,4 @@
-package com.kloylar.enlavia;
+package com.kloylar.enlavia.database;
 
 import com.kloylar.enlavia.model.ReportData;
 import android.content.Context;

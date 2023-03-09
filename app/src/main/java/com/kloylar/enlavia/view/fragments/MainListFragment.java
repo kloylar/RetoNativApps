@@ -1,4 +1,4 @@
-package com.kloylar.enlavia;
+package com.kloylar.enlavia.view.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,11 +9,13 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
-import com.kloylar.enlavia.databinding.FragmentFirstBinding;
+import com.google.android.material.snackbar.Snackbar;
+import com.kloylar.enlavia.R;
+import com.kloylar.enlavia.databinding.FragmentMainListBinding;
 
-public class FirstFragment extends Fragment {
+public class MainListFragment extends Fragment {
 
-    private FragmentFirstBinding binding;
+    private FragmentMainListBinding binding;
 
     @Override
     public View onCreateView(
@@ -21,7 +23,7 @@ public class FirstFragment extends Fragment {
             Bundle savedInstanceState
     ) {
 
-        binding = FragmentFirstBinding.inflate(inflater, container, false);
+        binding = FragmentMainListBinding.inflate(inflater, container, false);
         return binding.getRoot();
 
     }
@@ -32,8 +34,16 @@ public class FirstFragment extends Fragment {
         binding.buttonFirst.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(FirstFragment.this)
+                NavHostFragment.findNavController(MainListFragment.this)
                         .navigate(R.id.action_FirstFragment_to_SecondFragment);
+            }
+        });
+
+        binding.fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
             }
         });
     }
