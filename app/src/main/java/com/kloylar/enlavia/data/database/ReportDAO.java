@@ -1,5 +1,6 @@
 package com.kloylar.enlavia.data.database;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
@@ -12,11 +13,11 @@ import java.util.List;
 
 @Dao
 public interface ReportDAO {
-    @Query("SELECT * FROM ReportData")
-    List<ReportData> getAll();
+    @Query("SELECT * FROM ReportData ORDER BY timestamp")
+    LiveData<List<ReportData>> getAll();
 
-    @Query("SELECT * FROM ReportData WHERE id IN (:Id)")
-    List<ReportData> loadAllByIds(int[] Id);
+    @Query("SELECT * FROM ReportData WHERE id = (:Id)")
+    ReportData loadByIds(long Id);
 
     @Insert
     long[] insertAll(ReportData... reports);

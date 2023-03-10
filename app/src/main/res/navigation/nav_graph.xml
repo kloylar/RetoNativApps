@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/MainListFragment"
         android:name="com.kloylar.enlavia.view.fragments.MainListFragment"
-        android:label="@string/first_fragment_label"
+        android:label="@string/main_list_fragment_label"
         tools:layout="@layout/fragment_main_list">
 
         <action
@@ -18,7 +18,7 @@
     <fragment
         android:id="@+id/ReportFragment"
         android:name="com.kloylar.enlavia.view.fragments.ReportFragment"
-        android:label="@string/second_fragment_label"
+        android:label="@string/report_fragment_label"
         tools:layout="@layout/fragment_report">
 
         <action

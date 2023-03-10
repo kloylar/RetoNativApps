@@ -20,5 +20,8 @@ public class ReportData {
     @Ignore
     public Bitmap image;
 
-
+    public ReportData(String description) {
+        this.description = description;
+        timestamp = System.currentTimeMillis();
+    }
 }

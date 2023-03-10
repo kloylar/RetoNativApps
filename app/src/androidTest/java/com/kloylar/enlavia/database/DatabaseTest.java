@@ -2,6 +2,7 @@ package com.kloylar.enlavia.database;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 
+import org.hamcrest.MatcherAssert;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -41,17 +42,17 @@ public class DatabaseTest {
 
     @Test
     public void writeReportAndRead() throws Exception {
-        ReportData reportData = ReportFactory.createReport(appContext, "descripcion del reporte");
-        long id = reportDao.insertReport(reportData);
-
-        //List<User> byName = reportDao.findUsersByName("george");
-        //assertThat(byName.get(0), equalTo(reportData));
+        ReportData reportData1 = ReportFactory.createReport(appContext, "descripcion del reporte");
+        long id = reportDao.insertReport(reportData1);
+        ReportData reportData2 = reportDao.loadByIds(id);
+        Assert.assertEquals(reportData1.timestamp, reportData2.timestamp);
+        Assert.assertEquals(reportData1.description, reportData2.description);
     }
 
     @Test
     public void writeReport() throws Exception {
         ReportData reportData = ReportFactory.createReport(appContext, "descripcion del reporte");
         long id = reportDao.insertReport(reportData);
-        Assert.assertTrue(id >=0);
+        Assert.assertTrue(id >=1);
     }
 }
